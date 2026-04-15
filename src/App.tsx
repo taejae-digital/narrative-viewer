@@ -39,20 +39,20 @@ export default function App() {
 
   return (
     <div style={{ minHeight: '100vh', background: '#f8fafc', fontFamily: "'Apple SD Gothic Neo', 'Pretendard', sans-serif" }}>
-      <div style={{ maxWidth: 860, margin: '0 auto', padding: '48px 32px' }}>
+      <div style={{ maxWidth: 860, margin: '0 auto', padding: '24px 16px' }}>
 
         {/* Header */}
         <h1 style={{ fontSize: 26, fontWeight: 700, color: '#0f172a', marginBottom: 6 }}>태재디지털팀 네러티브</h1>
         <p style={{ color: '#64748b', fontSize: 13, marginBottom: 32 }}>개인의 시대 · 버전 히스토리</p>
 
         {/* Controls */}
-        <div style={{ background: '#fff', borderRadius: 12, padding: '20px 24px', marginBottom: 28, border: '1px solid #e2e8f0', display: 'flex', alignItems: 'center', gap: 24, flexWrap: 'wrap' }}>
+        <div style={{ background: '#fff', borderRadius: 12, padding: '16px', marginBottom: 20, border: '1px solid #e2e8f0', display: 'flex', alignItems: 'center', gap: 16, flexWrap: 'wrap' }}>
           <div>
             <label style={{ fontSize: 12, fontWeight: 600, color: '#475569', display: 'block', marginBottom: 6 }}>버전</label>
             <select
               value={selectedIdx}
               onChange={e => { setSelectedIdx(Number(e.target.value)); setShowDiff(false) }}
-              style={{ fontSize: 14, padding: '8px 12px', borderRadius: 8, border: '1px solid #cbd5e1', minWidth: 300, cursor: 'pointer' }}
+              style={{ fontSize: 14, padding: '8px 12px', borderRadius: 8, border: '1px solid #cbd5e1', minWidth: 0, width: '100%', cursor: 'pointer' }}
             >
               {VERSIONS.map((v, i) => (
                 <option key={v.version} value={i}>
@@ -98,7 +98,7 @@ export default function App() {
               ))}
             </div>
           ) : (
-            <div style={{ padding: '40px 48px', lineHeight: 1.9, color: '#1e293b' }}>
+            <div style={{ padding: '20px 20px', lineHeight: 1.9, color: '#1e293b' }}>
               <ReactMarkdown
                 remarkPlugins={[remarkGfm]}
                 components={{
